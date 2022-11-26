@@ -11,6 +11,7 @@ import javafx.scene.layout.VBox;
 /**
  * Author: Lada Egolaeva
  *
+ *
  * GameView class is responsible for defining and creating the
  * playing board.
  *

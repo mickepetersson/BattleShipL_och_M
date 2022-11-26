@@ -3,9 +3,16 @@ package com.example.battleship_sink;
 /*
 * Author: Mikael Petersson
 *
+* Comment:
+* Decided to keep class "as is", as I feel that it represents more or less
+* where my mind was at, at the time of writing. Although the tips concerning
+* replacing the int[] with BoardSquare[] was much appreciated and will be put into
+* the think bank for next time!
+*
 */
 
 import java.util.Arrays;
+
 
     public class Ship {
         private int[] body;

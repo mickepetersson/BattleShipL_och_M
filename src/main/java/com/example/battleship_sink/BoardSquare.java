@@ -22,6 +22,7 @@ public class BoardSquare {
         this.canPlaceShip = canPlaceShip;
         this.isEliminated = isEliminated;
     }
+   //copy constructor to use when populating the board with boardsquares
     public BoardSquare(BoardSquare source){
         this.number = source.number;
         this.hasShip = source.hasShip;

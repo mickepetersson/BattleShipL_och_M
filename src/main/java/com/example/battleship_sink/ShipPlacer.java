@@ -48,15 +48,21 @@ public class ShipPlacer {
         //return the finished board with all ships placed
         return board;
     }
+
+
+
+
     //Create a method to place a ship based on size on a board
-
-
     public Board shitPlotPooper(Board board, int size){
 
         int direction;
         while(true) {
 
+           //generates a base coordinate, and if all checks fail, generates a new one.
             int randRow = randNumGenerator();
+
+            //all souts in this class are for testing; they fill no other particular purpose,
+            //but are valuable in analyzing what happens in all steps.
             System.out.println(randRow);
             int randCol = randNumGenerator();
             System.out.println(randCol);
@@ -86,6 +92,8 @@ public class ShipPlacer {
         return board;
     }
 
+    //we had problems with ships not finding a place on the board,
+    //and so experimented with a fixed position for the largest ship
     public Board setHangarShip (Board board){
         tempArray = new int[5];
         int tempArrayIndex = 0;
@@ -100,8 +108,8 @@ public class ShipPlacer {
         }
         return board;
     }
-    // make a method to set a ship on the board based on size and direction of plotting, and also to eliminate all relevant squares
 
+    // make a method to set a ship on the board based on size and direction of plotting, and also to eliminate all relevant squares
     public Board setShipOnBoard(Board board, int direction, int size, int randRow, int randCol){
         tempArray = new int[size];
         int tempArrayIndex = 0;
@@ -432,10 +440,6 @@ public class ShipPlacer {
 
         return board;
     }
-
-
-
-
     }
 
 

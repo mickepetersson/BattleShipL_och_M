@@ -11,11 +11,7 @@ public class Turn {
     public Turn() {
     }
 
-    //shoot a shot
-
-
-
-    //public
+    //testing method to shot a shot at a random coordinate, in this case using number instead of coordinates
     public boolean testShot (Board board, int number){
         boolean status = false;
         for (int i = 0; i < board.getBoard().length; i++){
@@ -33,7 +29,7 @@ public class Turn {
 
 
 
-
+//purpose: to determine if a ship was shot during current round
     public boolean gotHit (Board board, int row, int col){
         boolean status = false;
         if (board.getBoard()[row][col].getHasShip()){
@@ -42,6 +38,7 @@ public class Turn {
         return status;
     }
 
+    //
     public Board firstShit(Board board){
         int randRow = rng();
         int randCol = rng();

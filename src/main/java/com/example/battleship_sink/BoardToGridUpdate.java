@@ -4,6 +4,10 @@ package com.example.battleship_sink;
 * Co-Authors:
 * Lada Egolaeva & Mikael Petersson
 *
+* purpose:
+* to code the engine to update the games GUI.
+* our process is outlined below, but the result was not successful beyond the first shot.
+*
 * */
 
 import javafx.scene.Node;

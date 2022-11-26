@@ -4,6 +4,11 @@ package com.example.battleship_sink;
 *
 * Author: Lada Egolaeva
 *
+* Comment:
+* This was the class we based much on the game on, especially when we were working more with the front-end
+* focused game. Thus, it played an important role for much of the project, and has served as inspiration
+* for several other methods in use throughout the project code.
+*
 */
 
 import javafx.scene.Node;
@@ -32,7 +37,7 @@ public class GameSession {
         checkShotCoordinates();
     }
 
-    //slumpar fram x- och y-koordinater och returnerar en random cell
+    //generates random coordinates and returns a node
     public Node getRandomNode (GridPane gridPane, int randRow, int randCol) {
         for (Node node : gridPane.getChildren()) {
             if (GridPane.getColumnIndex(node) == randCol && GridPane.getRowIndex(node) == randRow) {
@@ -42,7 +47,8 @@ public class GameSession {
         return null;
     }
 
-    //skjuter ett slumpmässigt valt skott på fienden samt skriver ut koordinaterna
+    //testing method to shoot a random shot at an enemy board, as well as print the hit coordinates.
+    //basis for shot-method in Turn class
     public void shootRandomShotAtEnemy() {
         List<String> rows = Arrays.asList("A", "B", "C", "D", "E", "F", "G", "H", "I", "J");
         List<Integer> columns = Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
@@ -55,6 +61,8 @@ public class GameSession {
         System.out.println("Player 1 shot their shot at " + rows.get(rowIndex) + columns.get(columnIndex));
     }
 
+    //method to check which coordinates have already been shot, and are thus eliminated.
+    //inspiration for several parts in ShipPlacer class, and eventually Checker class.
     public void checkShotCoordinates() {
         List<String> rows = Arrays.asList("A", "B", "C", "D", "E", "F", "G", "H", "I", "J");
         List<Integer> columns = Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);

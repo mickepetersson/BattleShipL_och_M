@@ -59,26 +59,32 @@ public class BattleshipMain extends Application {
         ArrayList<Ship> clientShips = shipwright.unleashTheShipwrightsMagic();
 
         ShipPlacer shipPlacer = new ShipPlacer();
+
+        //place ships on boards
         shipPlacer.plotShips(playerBoard, serverShips);
         shipPlacer.plotShips(enemyBoard, clientShips);
 
+        //test the shot function, although this is obsolete at this point, fyi.
         testTurn.testShot(playerBoard, testTurn.rng());
 
+        //print board in console to check all squares
         System.out.println(Arrays.deepToString(playerBoard.getBoard()));
         System.out.println(Arrays.deepToString(enemyBoard.getBoard()));
 
-//        System.out.println(serverShips.get(0));
-//        System.out.println(serverShips.get(1));
-//        System.out.println(serverShips.get(2));
-//        System.out.println(serverShips.get(3));
-//        System.out.println(serverShips.get(4));
-//        System.out.println(serverShips.get(5));
-//        System.out.println(serverShips.get(6));
-//        System.out.println(serverShips.get(7));
-//        System.out.println(serverShips.get(8));
-//        System.out.println(serverShips.get(9));
-//        playerBoard.getBoard()[0][0].setHasBeenHit(true);
+        //print ships in console, this example contains the ships of the "server"
+        System.out.println(serverShips.get(0));
+        System.out.println(serverShips.get(1));
+        System.out.println(serverShips.get(2));
+        System.out.println(serverShips.get(3));
+        System.out.println(serverShips.get(4));
+        System.out.println(serverShips.get(5));
+        System.out.println(serverShips.get(6));
+        System.out.println(serverShips.get(7));
+        System.out.println(serverShips.get(8));
+        System.out.println(serverShips.get(9));
+        playerBoard.getBoard()[0][0].setHasBeenHit(true);
 
+        //methods to upgrade the GUI based on the board
         testUpdate.returnGrid(playerBoard, gameView.playerBoard);
         testUpdate.returnGrid(enemyBoard, gameView.enemyBoard);
 
@@ -89,6 +95,7 @@ public class BattleshipMain extends Application {
     }
 
 
+    //simple RNG to use with game methods
     public int rng(){
         return (int) (Math.random() * 100);
     }

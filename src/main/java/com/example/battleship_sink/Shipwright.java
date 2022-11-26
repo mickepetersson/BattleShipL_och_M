@@ -10,7 +10,6 @@ import java.util.ArrayList;
 public class Shipwright {
 
     //Class to create a fleet of ships and put them in an ArrayList.
-
     //Method to create all the ships for a player, and return them as an ArrayList
 
     public ArrayList<Ship> unleashTheShipwrightsMagic(){
